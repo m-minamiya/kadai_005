@@ -21,22 +21,55 @@
                 $this->price = $b;
             }
             //メソッドを定義する
-            public function get_price () {
+            public function get_price() {
                 return $this->price;
             }
-            public function set_name($a) {
+            /*public function set_name($a) {
                 $this->name = $a;
-            }
+            }*/
             public function show_price() {
                 echo $this->get_price();
             }
         }
+
+        class Animal {
+            //プロパティを定義する
+            private $name;
+            private $height;
+            private $weight;
+
+            //コンストラクタを定義する
+            public function __construct($c, $d, $e) {
+                $this->name =$c;
+                $this->height =$d;
+                $this->weight =$e;
+            }
+            
+            //メソッドを定義する
+            public function get_height() {
+                return $this->height;
+            }
+            public function show_height() {
+                echo $this->get_height();
+            }
+        }
+
         //インスタンス化する
         $potato = new Food('potato', 250);
+        $dog = new Animal('dog', 60, 5000);
+
+        //インスタンスを出力する
+        print_r($potato);
+        echo '<br>';
+
+        print_r($dog);
+        echo '<br>';
 
         //メソッドにアクセスして実行する
         $potato->show_price();
-        
+        echo '<br>';
+
+        $dog->show_height();
         ?>
     </p>
 </body>
