@@ -13,8 +13,16 @@
         $user = 'root';
         $password = '';
 
-        $pdo = new PDO($dsn, $user, $password);
-        echo 'データベースの接続に成功しました。';
+        try {
+            //データベースの接続を試行する
+            $pdo = new PDO($dsn, $user, $password);
+
+            //データベースの接続に成功した場合の処理（例）
+            echo 'データベースの接続に成功しました。';
+        } catch (PDOException $e) {
+            //データベースの接続に失敗した場合の処理（例）
+            exit('データベースの接続に失敗しました。' . $e->getMessage());
+        }
         ?>
     </p>
 </body>

@@ -19,7 +19,6 @@
             <tr>
                 <td>性別</td>
                 <td>
-                    <!-- 質問：checkedとは何か？また必要か？ -->
                     <input type="radio" name="user_gender" value="男性">男性
                     <input type="radio" name="user_gender" value="女性">女性
                 </td>
